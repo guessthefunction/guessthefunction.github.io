@@ -41,6 +41,12 @@
     .legend{position:absolute;left:12px;bottom:12px;display:grid;gap:5px;max-width:380px}.legend-row{display:grid;grid-template-columns:16px minmax(0,1fr);align-items:center;gap:7px;padding:5px 8px;border:1px solid var(--border);border-radius:10px;background:rgba(255,255,255,.9);box-shadow:0 4px 12px rgba(60,64,67,.08);font-size:.82rem;cursor:pointer;user-select:none}.legend-row:hover{background:rgba(243,245,247,.96)}.legend-row.off{opacity:.45;text-decoration:line-through}.swatch{width:13px;height:13px;border-radius:50%;border:1px solid rgba(0,0,0,.15)}.legend-row.off .swatch{background:#fff!important}.legend-text{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
     .trace-tooltip{position:absolute;display:none;pointer-events:none;z-index:10;max-width:330px;padding:7px 9px;border:1px solid var(--border);border-radius:10px;background:rgba(255,255,255,.96);box-shadow:var(--shadow);font:12px/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre}
     @media(max-width:760px){#app{grid-template-columns:1fr;grid-template-rows:auto 1fr}aside{max-height:48vh;border-right:0;border-bottom:1px solid var(--border)}}
+    .footer-credit{
+  color:var(--muted);
+  font-size:.72rem;
+  text-align:center;
+  margin:14px 0 4px;
+}
   </style>
 </head>
 <body>
@@ -53,6 +59,7 @@
     <section class="card"><div class="features-head"><label for="featureTarget" style="margin:0">Checks</label><button class="small" id="refreshFeaturesBtn">↻</button></div><select id="featureTarget"></select><div class="status tiny" id="featureStatus">current view</div><div class="feature-list" id="featureList"></div></section>
     <section class="card"><label>Frame</label><div class="frame-grid"><input id="frameXMin" value="-10" placeholder="x_min" title="x_min" autocomplete="off" spellcheck="false"><span>&lt; x &lt;</span><input id="frameXMax" value="10" placeholder="x_max" title="x_max" autocomplete="off" spellcheck="false"></div><div class="frame-grid"><input id="frameYMin" value="-10" placeholder="y_min" title="y_min" autocomplete="off" spellcheck="false"><span>&lt; y &lt;</span><input id="frameYMax" value="10" placeholder="y_max" title="y_max" autocomplete="off" spellcheck="false"></div><div class="frame-actions"><button class="small" id="useCurrentFrameBtn">Use current</button><button class="small" id="standardFrameBtn">Standard</button><button class="small" id="farFrameBtn">Far</button></div></section>
     <section class="card"><label>Database</label><div class="database" id="databaseText"></div></section>
+    <div class="footer-credit">by 26s6g fmath</div>
   </aside>
   <main>
     <canvas id="graph"></canvas>
