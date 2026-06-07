@@ -421,9 +421,6 @@
   function renderDatabaseHelp(){
     var groups=[
       ["Database functions",FUNCTION_DATABASE.map(function(d){return d.label;}).join(" · ")],
-      ["Generated puzzle rules","max 3 distinct functions · no repeats · at most one trig · at most one inverse trig · + − × ÷ and composition allowed"],
-      ["Workspace","one graph per line · g = lnf · sing · g'(x) · f'(x) · f(100) · -f(x)"],
-      ["Syntax aliases","sinx = sin(x) · sqrtx · arcsinx/asinx · arctanx/atanx · 2x · x(x+1) · ^ for powers"]
     ];
     databaseText.innerHTML=groups.map(function(g){return '<div class="database-group"><div class="database-title">'+g[0]+'</div><div class="database-code">'+escapeHtml(g[1])+'</div></div>';}).join("");
   }
