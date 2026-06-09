@@ -174,11 +174,16 @@
     window.addEventListener("resize",resizeCanvas);
     if(window.visualViewport) window.visualViewport.addEventListener("resize",function(){setTimeout(resizeCanvas,60);});
     document.addEventListener("keydown",function(e){
-      if(e.key==="Enter" && e.shiftKey){
-        e.preventDefault();
-        newPuzzle();
-      }
-    });
+  if(e.key==="Enter" && e.shiftKey){
+    e.preventDefault();
+
+    if(answerBox && answerBox.classList.contains("show")){
+      newPuzzle();
+    }else{
+      revealAnswer();
+    }
+  }
+});
 
     canvas.addEventListener("pointerdown",onPointerDown);
     canvas.addEventListener("pointermove",onPointerMove);
